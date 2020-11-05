@@ -62,6 +62,11 @@ public class home extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/return-book-1-560407.png"))); // NOI18N
         jButton3.setText("Resturn Book");
         jButton3.setPreferredSize(new java.awt.Dimension(127, 59));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 150, -1));
 
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
@@ -109,6 +114,11 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         new newstudent().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new returnBook().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
