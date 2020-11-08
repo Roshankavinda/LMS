@@ -1,8 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import java.sql.ResultSet;
+import net.proteanit.sql.DbUtils;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -47,9 +48,10 @@ public class Statics extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Issue Details");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
 
-        jTable1.setForeground(new java.awt.Color(255, 255, 204));
+        jTable1.setBackground(new java.awt.Color(255, 255, 204));
+        jTable1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -67,9 +69,10 @@ public class Statics extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Return Details");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
 
-        jTable2.setForeground(new java.awt.Color(255, 255, 204));
+        jTable2.setBackground(new java.awt.Color(255, 255, 204));
+        jTable2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -96,14 +99,26 @@ public class Statics extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 410, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/form b.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 480));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 700, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
+        try
+        {
+            Connection con = (Connection) library.managment.sysytem.Database.getCon();
+            Statement st=(Statement) con.createStatement();
+            ResultSet rs=st.executeQuery("select issue.studentID,student.studentName,issue.bookID,book.name,issue.issueDate,issue.dueDate from student join book inner join issue where book.bookID=issue.bookID and student.studentID=issue.studentID and issue.returnBook='NO'");
+            jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+            ResultSet rs1=st.executeQuery("select issue.studentID,student.studentName,issue.bookID,book.name,issue.issueDate,issue.dueDate from student join book inner join issue where book.bookID=issue.bookID and student.studentID=issue.studentID and issue.returnBook='YES'");
+            jTable2.setModel(DbUtils.resultSetToTableModel(rs1));
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,"Connection error");
+        }
     }//GEN-LAST:event_formComponentShown
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

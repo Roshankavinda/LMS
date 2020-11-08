@@ -1,11 +1,6 @@
 
 import javax.swing.JFrame;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -43,20 +38,25 @@ public class home extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/member-add-on-300x300.png"))); // NOI18N
-        jButton1.setText("Add Student");
+        jButton1.setText("New Student");
         jButton1.setPreferredSize(new java.awt.Dimension(159, 59));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 150, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, -1));
 
         jButton2.setBackground(new java.awt.Color(153, 255, 153));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/New book.png"))); // NOI18N
-        jButton2.setText("Add Book");
+        jButton2.setText("New Book");
         jButton2.setPreferredSize(new java.awt.Dimension(159, 59));
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 148, -1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 148, -1));
 
         jButton3.setBackground(new java.awt.Color(153, 255, 153));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/return-book-1-560407.png"))); // NOI18N
@@ -67,7 +67,7 @@ public class home extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 150, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 160, -1));
 
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exit.png"))); // NOI18N
@@ -82,7 +82,12 @@ public class home extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(153, 255, 153));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/issue.png"))); // NOI18N
         jButton5.setText("Issue Book");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 148, -1));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 148, -1));
 
         jButton6.setBackground(new java.awt.Color(153, 255, 153));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Statics.png"))); // NOI18N
@@ -108,6 +113,7 @@ public class home extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        new Statics().setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -117,8 +123,18 @@ public class home extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new returnBook().setVisible(true);
+       new ReturnBooks().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new newbook().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        new IssueBook().setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
