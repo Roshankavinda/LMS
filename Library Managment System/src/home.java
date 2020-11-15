@@ -99,7 +99,7 @@ public class home extends javax.swing.JFrame {
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 30, 148, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ws_Green_Gradient_Background_1366x768.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BI.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
