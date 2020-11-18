@@ -1,5 +1,5 @@
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 
@@ -96,8 +96,8 @@ public class newbook extends javax.swing.JFrame {
         jTextField4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 270, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/form b.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, 700, 450));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form Background.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

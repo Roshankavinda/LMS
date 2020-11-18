@@ -37,29 +37,30 @@ public class login extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Username");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 80, 20));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Password");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 70, 20));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 204));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 228, -1));
 
         jPasswordField1.setBackground(new java.awt.Color(255, 255, 204));
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 228, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +71,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 460, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(204, 255, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red-x-mark-transparent-background-3.png"))); // NOI18N
         jButton2.setText("Close");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -80,8 +81,11 @@ public class login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 460, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setText("NSBM Green University Library Managment System");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, -1, -1));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/log in.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -145,6 +149,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

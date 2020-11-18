@@ -1,8 +1,10 @@
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
 import java.sql.ResultSet;
-import net.proteanit.sql.DbUtils;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
+import net.proteanit.sql.DbUtils;
+
+
 
 
 /**
@@ -48,7 +50,7 @@ public class Statics extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Issue Details");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, -1, -1));
 
         jTable1.setBackground(new java.awt.Color(255, 255, 204));
         jTable1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -68,8 +70,8 @@ public class Statics extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 580, 121));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Return Details");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+        jLabel2.setText("Return  Details");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
         jTable2.setBackground(new java.awt.Color(255, 255, 204));
         jTable2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -86,7 +88,7 @@ public class Statics extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 580, 120));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 580, 120));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/red-x-mark-transparent-background-3.png"))); // NOI18N
@@ -96,9 +98,9 @@ public class Statics extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 410, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/form b.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form Background.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 700, 460));
 
         pack();

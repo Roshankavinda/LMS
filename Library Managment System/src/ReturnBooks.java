@@ -1,7 +1,9 @@
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
+
+
 
 
 /**
@@ -41,6 +43,7 @@ public class ReturnBooks extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(325, 125));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -108,8 +111,8 @@ public class ReturnBooks extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/form b.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 450));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form Background.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,7 +125,7 @@ public class ReturnBooks extends javax.swing.JFrame {
         {
            Connection con = (Connection) library.managment.sysytem.Database.getCon();
            Statement st=(Statement) con.createStatement();
-           ResultSet rs=st.executeQuery("select *from issue where studentID='"+studentID+"' and '"+bookID+"'");
+           ResultSet rs=st.executeQuery("select *from issue where studentID='"+studentID+"' and bookID='"+bookID+"'");
            if(rs.next())
            {
                jTextField3.setText(rs.getString(3));

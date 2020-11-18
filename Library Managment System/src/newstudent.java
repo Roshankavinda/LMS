@@ -1,5 +1,5 @@
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 
@@ -97,9 +97,9 @@ public class newstudent extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 302, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/form b.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form Background.png"))); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,7 +112,7 @@ public class newstudent extends javax.swing.JFrame {
         String faculty=(String)jComboBox1.getSelectedItem();
         try
         {
-            Connection con=(Connection) library.managment.sysytem.Database.getCon();
+            Connection con=(Connection)library.managment.sysytem.Database.getCon();
             Statement st=(Statement) con.createStatement();
             st.executeUpdate("insert into student values ('"+studentName+"','"+studentID+"','"+email+"','"+faculty+"')");
             JOptionPane.showMessageDialog(null,"Successfully update");
