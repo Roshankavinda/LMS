@@ -38,7 +38,7 @@ public class home extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/member-add-on-300x300.png"))); // NOI18N
-        jButton1.setText("New Student");
+        jButton1.setText("New Member");
         jButton1.setPreferredSize(new java.awt.Dimension(159, 59));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
